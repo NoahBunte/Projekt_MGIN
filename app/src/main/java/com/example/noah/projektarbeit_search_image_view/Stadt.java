@@ -5,12 +5,15 @@ public class Stadt {
     int Einwohner; //in Millionen
     int fläche;
     int höhe;
+    int[]stadtbilder;
 
-    public Stadt(String name, int einwohner, int fläche, int höhe) {
+
+    public Stadt(String name, int einwohner, int fläche, int höhe, int[] stadtbilder) {
         this.name = name;
         Einwohner = einwohner;
         this.fläche = fläche;
         this.höhe = höhe;
+        this.stadtbilder = stadtbilder;
     }
 
     public Stadt() {
@@ -46,6 +49,14 @@ public class Stadt {
 
     public void setHöhe(int höhe) {
         this.höhe = höhe;
+    }
+
+    public int[] getStadtbilder() {
+        return stadtbilder;
+    }
+
+    public void setStadtbilder(int[] stadtbilder) {
+        this.stadtbilder = stadtbilder;
     }
 
     @Override
