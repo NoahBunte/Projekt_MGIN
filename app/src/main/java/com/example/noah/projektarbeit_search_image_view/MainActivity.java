@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         final ArrayList <Stadt> items = initData();
 
+        //
+
         adapter = new ArrayAdapter<Stadt>(this, android.R.layout.simple_list_item_1, items);
         search_city.setAdapter(adapter);
         search_city.setOnItemClickListener(new AdapterView.OnItemClickListener() {
