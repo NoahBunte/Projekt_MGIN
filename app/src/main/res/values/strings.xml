@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Projektarbeit_Search_Image_View</string>
+
+    <string-array name="Citys">
+        <item>Berlin</item>
+        <item>Wien</item>
+        <item>Linz</item>
+        <item>London</item>
+        <item>New York</item>
+        <item>Moskau</item>
+        <item>Prag</item>
+        <item>Paris</item>
+        <item>Rio</item>
+        <item>Istanbul</item>
+        <item>Salzburg</item>
+    </string-array>
 </resources>
