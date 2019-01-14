@@ -2,11 +2,14 @@ package com.example.noah.projektarbeit_search_image_view;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -27,12 +30,21 @@ public class MainActivity extends AppCompatActivity {
 
         search_city = (ListView) findViewById(R.id.search_city);
 
-        ArrayList <Stadt> items = initData();
+        final ArrayList <Stadt> items = initData();
 
         //
 
         adapter = new ArrayAdapter<Stadt>(this, android.R.layout.simple_list_item_1, items);
         search_city.setAdapter(adapter);
+        search_city.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, ImageMain.class);
+                String st = String.valueOf(adapter.getItem(3));
+                intent.putExtra("city", st);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -65,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Stadt> initData() {
         ArrayList <Stadt> linkedList = new ArrayList<Stadt>();
 
-        Stadt stadt1 = new Stadt("Wien", 189000, 414, 270);
-        Stadt stadt2 = new Stadt("Linz", 204000, 95, 266);
-        Stadt stadt3 = new Stadt("Berlin", 3620000, 891, 110);
-        Stadt stadt4 = new Stadt("London", 8800000, 1572, 105);
+        Stadt stadt1 = new Stadt("Wien", 189000, 414, 270, new int[]{R.drawable.wien, R.drawable.wien2});
+        Stadt stadt2 = new Stadt("Linz", 204000, 95, 266, new int[]{R.drawable.Linz, R.drawable.Linz2});
+        Stadt stadt3 = new Stadt("Berlin", 3620000, 891, 110, new int[]{R.drawable.Berlin, R.drawable.Berlin2});
+        Stadt stadt4 = new Stadt("London", 8800000, 1572, 105, new int[]{R.drawable.London2});
 
         linkedList.add(stadt1);
         linkedList.add(stadt2);
