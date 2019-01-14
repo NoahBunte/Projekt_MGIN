@@ -3,11 +3,87 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="189dp"
+        android:layout_height="41dp"
+        android:layout_alignBottom="@+id/textViewFläche"
+        android:layout_alignParentStart="true"
+        android:text="Fläche:" />
+
+    <TextView
+        android:id="@+id/textViewHoehe"
+        android:layout_width="183dp"
+        android:layout_height="37dp"
+        android:layout_alignStart="@+id/textViewEinwohner"
+        android:layout_alignTop="@+id/textView7"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="186dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="158dp"
+        android:text="Höhe:" />
+
+    <TextView
+        android:id="@+id/textViewFläche"
+        android:layout_width="183dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textViewEinwohner"
+        android:layout_marginTop="103dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewEinwohner"
+        android:layout_width="188dp"
+        android:layout_height="42dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_marginEnd="0dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="188dp"
+        android:layout_height="43dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="51dp"
+        android:text="Einwohnerzahl:" />
+
     <android.support.v4.view.ViewPager
         android:id="@+id/imgview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="216dp"
+        android:text="Webseite" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="189dp"
+        android:layout_height="43dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp" />
+        android:text="Stadt:" />
+
+    <TextView
+        android:id="@+id/textViewStadt"
+        android:layout_width="195dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView"
+        android:text="TextView" />
 </RelativeLayout>

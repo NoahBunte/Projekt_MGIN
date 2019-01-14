@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList <Stadt> items = initData();
 
+        //
+
         adapter = new ArrayAdapter<Stadt>(this, android.R.layout.simple_list_item_1, items);
         search_city.setAdapter(adapter);
     }
